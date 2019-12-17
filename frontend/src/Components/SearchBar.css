@@ -1,0 +1,21 @@
+.search {
+  position: relative;
+}
+
+.search-input {
+  /* position: absolute; */
+  border-radius: 4px;
+  height: 20px;
+  width: 300px;
+  padding-left: 5px;
+  text-indent: 30px;
+}
+
+.search-icon {
+  position: absolute;
+  bottom: 3px;
+  left: 8px;
+  height: 20px;
+  filter: invert(64%) sepia(0%) saturate(0%) hue-rotate(186deg) brightness(94%)
+    contrast(88%);
+}

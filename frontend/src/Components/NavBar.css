@@ -1,0 +1,33 @@
+.navbar-header {
+  display: flex;
+  height: 56px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: #313131;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-item {
+  color: #868688;
+  padding-right: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.navbar-item:hover {
+  color: white;
+  user-select: none;
+}
+
+.icon {
+  filter: invert(64%) sepia(0%) saturate(0%) hue-rotate(186deg) brightness(94%)
+    contrast(88%);
+}
+
+.icon:hover {
+  filter: invert(99%) sepia(1%) saturate(2377%) hue-rotate(58deg)
+    brightness(112%) contrast(101%);
+}
