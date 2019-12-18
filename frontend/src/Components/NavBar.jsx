@@ -4,6 +4,7 @@ import "./NavBar.css";
 
 class NavBar extends Component {
   render = () => {
+    // rendu de la barre de navigation
     return (
       <div className="navbar-header">
         <div style={{ display: "flex" }}>

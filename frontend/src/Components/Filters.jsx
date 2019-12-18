@@ -3,6 +3,7 @@ import "./Filters.css";
 
 class Filters extends Component {
   render = () => {
+    //rendu de la boîte des filtres
     return (
       <div className="filter-box">
         <span style={{ color: "#ffffff", fontWeight: "bold" }}>ONLY</span>

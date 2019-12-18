@@ -3,6 +3,7 @@ import "./SearchBar.css";
 
 class SearchBar extends Component {
   render = () => {
+    // rendu de la barre de recherche
     return (
       <div className="search">
         <input className="search-input" placeholder="Search" type="text" />

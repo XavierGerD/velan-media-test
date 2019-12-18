@@ -37,6 +37,7 @@ function App() {
                 paddingRight: "20px"
               }}
             >
+              {/* icône feed RSS  */}
               <img
                 alt=""
                 src="rss_icon.svg"
@@ -52,6 +53,7 @@ function App() {
                 paddingRight: "20px"
               }}
             >
+              {/* icône Twitter */}
               <img
                 alt=""
                 src="twitter_icon.svg"
@@ -69,6 +71,15 @@ function App() {
           <div className="blurb">
             Hiring designers? <a href="link">Create a team</a> to get the most
             exposure for your jobs
+          </div>
+
+          <div className="blurb" style={{ marginTop: "60px" }}>
+            <span style={{ color: "#000000" }}>Previously</span> on Dribble
+          </div>
+
+          <div style={{ marginTop: "20px" }}>
+            <img alt="facebook" src="/facebook.png" height="70px" />
+            <img alt="microsoft" src="/microsoft.png" height="70px" />
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ connection.connect(err => {
   console.log("Connected as thread id: ", connection.threadId);
 });
 
-app.post("/get-postings", (req, res) => {
+app.post("/post-postings", (req, res) => {
   console.log("endpoint hit!");
   connection.query("SELECT * FROM emploi", (err, rows) => {
     if (err) throw err;
@@ -29,6 +29,22 @@ app.post("/get-postings", (req, res) => {
     res.send(JSON.stringify({ success: true, rows }));
   });
 });
+
+let createTable = () => {
+  let sql = ` CREATE TABLE "test"."emploi" (
+    "idemploi" INT NOT NULL,
+    "job_title" VARCHAR(45) NOT NULL,
+    "location" VARCHAR(45) NOT NULL,
+    "company" VARCHAR(45) NOT NULL,
+    "image" VARCHAR(45) NOT NULL,
+    PRIMARY KEY ("idemploi"));`;
+  connection.query(sql, (err, rows) => {
+    if (err) throw err;
+    console.log(rows);
+  });
+};
+
+// createTable()
 
 app.use("/", express.static("build"));
 

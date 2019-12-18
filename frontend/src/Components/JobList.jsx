@@ -9,12 +9,14 @@ class JobList extends Component {
     };
   }
   componentDidMount = async () => {
-    let promise = await fetch("/get-postings", {
+    // fetch des annonces à afficher
+    let promise = await fetch("/post-postings", {
       method: "POST"
     });
     let response = await promise.text();
     let responseBody = JSON.parse(response);
     console.log("response body", responseBody);
+    // garder les annonce dans le state
     this.setState({ postings: responseBody.rows });
   };
 
@@ -33,6 +35,7 @@ class JobList extends Component {
         <div>
           {this.state.postings.map(posting => {
             return (
+              //seulement afficher une image si l'annonce en contient une
               <div className="job-listing">
                 {posting.image !== "null"
                   ? <div className="thumbnail">
